@@ -10,7 +10,7 @@ namespace ConsoleApp6
             Stopwatch time = new Stopwatch();
             time.Start();
             int[,] mass = { { -1, -1 }, { -1, 1 }, { 1, -1 }, { 1, 1 } };
-            int[] mass_y = { -1, 1, 1, 1 };
+            int[] mass_y = { -1, -1, -1, 1 };
             double[] mass_cnt = new double[4];
 
             double w1 = 1;
@@ -21,7 +21,7 @@ namespace ConsoleApp6
             double schetch = 0;
             int number = 0;
 
-            while (cnt < 30)
+            while (cnt < 30 || sum <= 0.3)
             {
                 Console.WriteLine($"Итерация {cnt + 1}");
                 Console.WriteLine($"w11({cnt}) = {w1},  w21({cnt}) = {w2}, S = {S}");
